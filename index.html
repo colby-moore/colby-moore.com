@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="ColbyApp">
+
+<head>
+  <!-- SCROLLS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/skills.css" rel="stylesheet">
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-flex">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar1"></span>
+            <span class="icon-bar icon-bar2"></span>
+            <span class="icon-bar icon-bar3"></span>
+          </button>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a id="focusmeplease" class="selected hidden-xs" href="#">HOME</a>
+              <a class="selected visible-xs" href="#" data-toggle="collapse" data-target=".navbar-collapse">HOME</a>
+            </li>
+            <li>
+              <a href="#whoami" class="hidden-xs">WHOAMI</a>
+              <a href="#whoami" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">WHOAMI</a>
+            </li>
+            <li>
+              <a href="#projects" class="hidden-xs">PROJECTS</a>
+              <a href="#projects" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">PROJECTS</a>
+            </li>
+            <li>
+              <a href="#contact" class="hidden-xs">CONTACT</a>
+              <a href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">CONTACT</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+  <div id="container">
+
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links text-center">
+      <p></p>
+      <!-- <ul>
+        <li><a href=""><img src="https://img.icons8.com/dotty/80/000000/github.png"></a></li>
+        <li><a href=""><img src="https://img.icons8.com/dotty/80/000000/facebook.png"></a></li>
+        <li><a href=""><img src="https://img.icons8.com/dotty/80/000000/google-plus.png"></a></li>
+        <li><a href=""><img src="https://img.icons8.com/dotty/80/000000/linkedin.png"></a></li>
+      </ul> -->
+    </div>
+  </footer>
+  <div class="copyright">
+    <p class="text-center">You can check me here on github <a href="https://github.com/colby-moore" target="_blank"><img src="https://img.icons8.com/dotty/80/000000/github.png"></a><br>&copy; Last edited 04/2019 - Colby Moore</p>
+  </div>
+
+  <!--Reference http://chengsuchen.com/about -->
+
+  <!-- jQuery -->
+ <script src="js/jquery.js"></script>
+
+ <!-- Bootstrap Core JavaScript -->
+ <script src="js/bootstrap.min.js"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+ <script>
+   document.getElementById('focusmeplease').focus();
+ </script>
+
+ <script>
+   $('a').on('click', function(){
+      $('a').removeClass('selected');
+      $(this).addClass('selected');
+  });
+ </script>
+
+<script type="text/javascript">
+  // https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
+  $(document).ready(function () {
+    var forEach = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]); // passes back stuff we need
+    }
+  };
+
+  var containers = document.querySelectorAll(".container-phone");
+
+  forEach(containers, function (index, value) {
+    value.addEventListener("click", function () {
+      this.classList.toggle("alert-is-shown");
+    });
+  });
+});  
+</script>
+
+<script>
+  // https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
+  $(document).ready(function () {
+    var forEach2 = function (array2, callback2, scope2) {
+    for (var j = 0; j < array2.length; j++) {
+      callback2.call(scope2, j, array2[j]); // passes back stuff we need
+    }
+  };
+
+  var containers2 = document.querySelectorAll(".container-tablet");
+
+  forEach2(containers2, function (index, value) {
+    value.addEventListener("click", function () {
+      this.classList.toggle("alert-is-shown");
+    });
+  });
+});  
+</script>
+
+</body>
+
+</html>

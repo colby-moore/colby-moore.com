@@ -1,0 +1,9 @@
+.check{
+background-color: yellow;
+font-weight: 700;
+}
+
+
+.check:focus{
+  color: white;
+}
