@@ -1,8 +1,8 @@
-	// create the module and name it scotchApp
-	var scotchApp = angular.module('ColbyApp', ['ngRoute']);
+	// create the module and name it ColbyApp
+	var ColbyApp = angular.module('ColbyApp', ['ngRoute', 'ngAnimate']);
 
 	// configure our routes
-	scotchApp.config(function($routeProvider) {
+	ColbyApp.config(function($routeProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -32,16 +32,16 @@
 	});
 
 	// create the controller and inject Angular's $scope
-	scotchApp.controller('mainController', function($scope) {
+	ColbyApp.controller('mainController', function($scope) {
 		// create a message to display in our view
 		$scope.homeQuote = "My name’s Colby and I’m a Web Developer in CT. I’m currently a digital team member and problem solver at Mintz + Hoke Advertising Agency.";
-
+		$scope.pageClass = 'home';
 		
 		
 	});
 
 	// create the controller and inject Angular's $scope
-	scotchApp.controller('whoamiController', function($scope) {
+	ColbyApp.controller('whoamiController', function($scope) {
 		// create a message to display in our view
 		$scope.whoamiQuote = "I don't want to change the world. I just want to change the way we interact with it.";
 		// $scope.school = 'Computer science student concentrating in software development. Currently I am a senior attending school at Marist College in Poughkeepsie, New York and will be graduating in Spring 2017!';
@@ -52,7 +52,7 @@
 
 	});
 
-	scotchApp.controller('projectsController', function($scope) {
+	ColbyApp.controller('projectsController', function($scope) {
 		$scope.headline = 'Sometimes computer science is a lot more art than it is science, and that is what I like most about it.';
 		$scope.languages = 'AngularJS, C++, HTML5, CSS, PHP, MySQL, SQL, JavaScript, Haskell, Swift';
 		$scope.frameworks = 'Bootstrap, Skeleton';
@@ -94,7 +94,7 @@
 
 	});
 
-	scotchApp.controller('contactController', function($scope) {
+	ColbyApp.controller('contactController', function($scope) {
 		$scope.shoutOut = "Need more info? Let's get aquainted!";
 		$scope.instagram = ' To see random pictures of me on Instagram.';
 		$scope.spotify = 'Check out music I like on Spotify.';
