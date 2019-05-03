@@ -60,6 +60,8 @@ h3 {
       border-radius: 0px;
       border: none; }
       .navbar ul {
+        opacity: 0;
+        animation: 1s fadein ease-out 1.25s forwards;
         list-style-type: none;
         margin: 0 auto;
         padding: 0;
@@ -163,6 +165,14 @@ h3 {
   min-height: calc(100vh - 70px); }
 
 .home-quote-content {
+  opacity: 0;
+  -webkit-animation: 0.75s fromTop ease-in-out 0.3s forwards;
+  /* Safari 4+ */
+  -moz-animation: 0.75s fromTop ease-in-out 0.3s forwards;
+  /* Fx 5+ */
+  -o-animation: 0.75s fromTop ease-in-out 0.3s forwards;
+  /* Opera 12+ */
+  animation: 0.75s fromTop ease-in-out 0.3s forwards;
   color: darkgray;
   padding: 50px;
   text-align: left;
@@ -753,5 +763,12 @@ footer {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
 
 /*# sourceMappingURL=style.css.map */

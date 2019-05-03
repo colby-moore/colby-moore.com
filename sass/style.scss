@@ -60,6 +60,8 @@ h3 {
     border-radius: 0px;
     border: none;
     ul {
+      opacity: 0;
+      animation: 1s fadein ease-out 1.25s forwards;
       list-style-type: none;
       margin: 0 auto;
       padding: 0;
@@ -192,6 +194,11 @@ h3 {
 }
 
 .home-quote-content {
+  opacity: 0;
+  -webkit-animation: .75s fromTop ease-in-out.3s forwards; /* Safari 4+ */
+  -moz-animation:    .75s fromTop ease-in-out.3s forwards; /* Fx 5+ */
+  -o-animation:      .75s fromTop ease-in-out.3s forwards; /* Opera 12+ */
+  animation: .75s fromTop ease-in-out.3s forwards;
   color: darkgray;
   padding: 50px;
   text-align: left;
@@ -883,4 +890,9 @@ footer {
 @keyframes fadein {
   0%   { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes fromTop {
+  0%   { opacity:0; transform: translateY(-10px); }
+  100% { opacity:1; transform: translateY(0px); }
 }
