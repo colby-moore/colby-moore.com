@@ -45,12 +45,12 @@ h3 {
 /* Navigation */
 
 .navbar {
+  z-index: 9999;
   border: none;
   margin: 0px;
   @media screen and (min-width: 769px) {
     background: #2e3238;
     height: 70px;
-    z-index: 1;
     align-content: center;
     display: flex;
     position: relative;
@@ -194,11 +194,12 @@ h3 {
 }
 
 .home-quote-content {
+  z-index: 9999;
   opacity: 0;
-  -webkit-animation: .75s fromTop ease-in-out.3s forwards; /* Safari 4+ */
-  -moz-animation:    .75s fromTop ease-in-out.3s forwards; /* Fx 5+ */
-  -o-animation:      .75s fromTop ease-in-out.3s forwards; /* Opera 12+ */
-  animation: .75s fromTop ease-in-out.3s forwards;
+  -webkit-animation: .75s fromTop ease-in-out .3s forwards; /* Safari 4+ */
+  -moz-animation:    .75s fromTop ease-in-out .3s forwards; /* Fx 5+ */
+  -o-animation:      .75s fromTop ease-in-out .3s forwards; /* Opera 12+ */
+  animation: .75s fromTop ease-in-out .3s forwards;
   color: darkgray;
   padding: 50px;
   text-align: left;
