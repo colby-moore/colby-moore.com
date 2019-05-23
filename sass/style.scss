@@ -12,6 +12,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,p{
+  color: #000;
   -webkit-animation: fadein .3s ease-in; /* Safari 4+ */
   -moz-animation:    fadein .3s ease-in; /* Fx 5+ */
   -o-animation:      fadein .3s ease-in; /* Opera 12+ */
@@ -23,6 +24,30 @@ img{
   -moz-animation:    fadein .5s ease-in; /* Fx 5+ */
   -o-animation:      fadein .5s ease-in; /* Opera 12+ */
   animation: fadein .5s ease-in;
+}
+
+p{
+  @media (min-width: 1200px)
+  {
+    font-size: larger;
+  }
+}
+
+h1{
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+
+  @media (min-width: 1100px){
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+  @media (min-width: 1200px)
+  {
+    font-size: 3.625rem;
+    line-height: 3.875rem;
+  }
 }
 
 h3 {
@@ -39,12 +64,25 @@ h3 {
 }
 
 .top-margin {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 50px;
+}
+
+
+
+@media only screen and (max-width: 994px) {
+  .row-inverse{
+    display: flex;
+    flex-flow: column-reverse;
+  }
 }
 
 /* Navigation */
 
 .navbar {
+  position: absolute;
+  width: 100%;
   z-index: 9999;
   border: none;
   margin: 0px;
@@ -200,13 +238,17 @@ h3 {
   -moz-animation:    .75s fromTop ease-in-out .3s forwards; /* Fx 5+ */
   -o-animation:      .75s fromTop ease-in-out .3s forwards; /* Opera 12+ */
   animation: .75s fromTop ease-in-out .3s forwards;
-  color: darkgray;
   padding: 50px;
   text-align: left;
   margin: 0 auto;
   justify-self: center;
   width: 37%;
   align-self: center;
+
+  h3,p{
+    color: darkgray;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 83.3333%;
     padding: 14px;
@@ -299,34 +341,56 @@ h3 {
 
 /* Who am I */
 
-.profile-pic {
+.profile-pic-one, .profile-pic-two, .profile-pic-three {
   display: flex;
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
+  max-height: 43.125rem;
+  background-size: cover;
+
+  &::before{
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 106.25%;
+  }
 }
 
-.profile-pic img {
-  display: block;
-  margin: 0 auto;
-  object-fit: cover;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+.profile-pic-one {
+  background-position: center;
+  background-image: url("../images/profile.jpg");
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.profile-pic-two {
+  background-image: url("https://www.fmsp.com/wp-content/uploads/2018/02/Marist-College-Student-Center-Rotunda-_1.jpg");
+}
+
+.profile-pic-three {
+  background-image: url("https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .profile-info {
-  display: flex;
   align-items: center;
-  margin-left: 40px;
   color: #312C32;
-  height: 300px;
-  @media only screen and (max-width: 768px) {
-    margin-left: 0px;
-    padding: 20px;
+  padding: 6.75rem 7.875rem 8rem 8.625rem;
+
+  @media only screen and (max-width: 900px) {
+      margin-left: 0px;
+      padding: 20px;
+  
   }
+
+  @media only screen and (max-width: 1100px) {
+    margin-left: 0px;
+    padding: 50px;
+
 }
+}
+
+
 
 .two-fifths-page {
   height: 40vh;
@@ -360,7 +424,7 @@ h3 {
 .box {
   position: relative;
   max-width: 100%;
-  background-color: #444;
+  background-color: #E9F4F8;
   color: #fff;
   font-size: 150%;
 }
@@ -445,6 +509,9 @@ h3 {
   height: 100%;
   padding: 75px 50px;
   font-size: 36px !important;
+  h1{
+    color: darkgray;
+  }
   a {
     text-decoration: none;
     color: black;
@@ -456,13 +523,14 @@ h3 {
     background-color: #56ebc3;
   }
   a:hover {
-    background-color: greenyellow;
+    background-color: #A2533D;
     color: black;
     transition: 1s;
   }
   p {
+    color: darkgray;
     width: 65%;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 25px;
     @media only screen and (max-width: 900px) {
       width: 80%;
@@ -636,7 +704,7 @@ h3 {
   height: 60px;
   left: 5%;
   bottom: 70px;
-  background: #e9f4f8;
+  background: #fff;
   border-radius: 4px;
   opacity: 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -723,7 +791,7 @@ h3 {
   height: 60px;
   left: 5%;
   bottom: -8px;
-  background: #e9f4f8;
+  background: #fff;
   border-radius: 4px;
   opacity: 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);

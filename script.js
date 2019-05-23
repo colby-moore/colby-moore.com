@@ -36,42 +36,6 @@
 		// create a message to display in our view
 		$scope.homeQuote = "My name’s Colby and I’m a Web Developer in CT. I’m currently a digital team member and problem solver at Mintz + Hoke Advertising Agency.";
 		$scope.pageClass = 'home';
-
-
-		$(document).ready(function () {
-			var mousePointer = document.getElementById('test1');
-			var mousePointer2 = document.getElementById('test2');
-			var mousePointer3 = document.getElementById('test3');
-
-			//fast
-			document.addEventListener('mousemove', function(e){
-				var x = e.pageX / window.innerHeight;
-						x = x * -30;
-				var y = e.pageY / window.innerWidth;
-						y = y * -30;
-
-				mousePointer.style.transform = 'translate(' + x + '%' + ',' + y + '%)';
-			})
-
-			//slow
-			document.addEventListener('mousemove', function(e){
-				var x = e.pageX / window.innerHeight;
-						x = x * -20;
-				var y = e.pageY / window.innerWidth;
-						y = y * -80;
-
-				mousePointer2.style.transform = 'translate(' + x + '%' + ',' + y + '%)';
-			})
-
-			document.addEventListener('mousemove', function(e){
-				var x = e.pageX / window.innerHeight;
-						x = x * 25;
-				var y = e.pageY / window.innerWidth;
-						y = y * 30;
-
-				mousePointer3.style.transform = 'translate(' + x + '%' + ',' + y + '%)';
-			})
-		});  
 	
 		
 		
