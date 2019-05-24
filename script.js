@@ -45,11 +45,6 @@
 	ColbyApp.controller('whoamiController', function($scope) {
 		// create a message to display in our view
 		$scope.whoamiQuote = "I don't want to change the world. I just want to change the way we interact with it.";
-		// $scope.school = 'Computer science student concentrating in software development. Currently I am a senior attending school at Marist College in Poughkeepsie, New York and will be graduating in Spring 2017!';
-		// $scope.minors = 'Along with the 4 year B.S. in computer science I am also minoring in Cybersecurity, Information Systems, and Information Technology.';
-		// $scope.frontEnd = 'I strive at creating simple, yet polished designs through using many different variations of design principles. There is no better way to learn than experience, and through trial and error I aim to broaden my knowledge each day.';
-		// $scope.intern = 'I have held two previous summer internships working in Enterprise Technology Departments for two healthcare providers. With the combination of my professional and academic careers, I have a very broad range of knowledge to offer.'
-		// $scope.whoamiFooter = 'Upon Graduating, I aspire to work for a company where I can further the extent of my knowledge through the challenges I am given.'
 
 	});
 
