@@ -3,7 +3,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FBF5E7;
-  // font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
@@ -87,6 +87,9 @@ h3 {
 
 .equal-columns{
   display: flex;
+  @media screen and (max-width: 991px){
+    flex-direction: column;
+  }
 }
 
 
@@ -157,7 +160,7 @@ h3 {
 .navbar-header {
   height: 70px;
   border: none;
-  background: #2e3238;
+  background: #fbf5e7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,8 +168,12 @@ h3 {
 
 .navbar-collapse {
   background: #fbf5e7;
-  border: none;
   text-align: center;
+  padding: 81px 0px;
+  transition: .2s;
+  @media only screen and (max-width: 768px) {
+    border-bottom: 1px solid gray;
+  }
 }
 
 .navbar-toggle {
@@ -176,12 +183,12 @@ h3 {
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #FBF5E7;
+  color: #0d0c34;
 }
 
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
-  color: white;
+  color: gray;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -193,16 +200,8 @@ h3 {
   width: 35px;
 }
 
-.icon-bar1 {
-  background-color: #893fe4 !important;
-}
-
-.icon-bar2 {
-  background-color: #15A3F9 !important;
-}
-
-.icon-bar3 {
-  background-color: #56ebc3 !important;
+.icon-bar {
+  background-color: #0d0c34 !important;
 }
 
 .navbar-flex {
@@ -314,6 +313,17 @@ h3 {
   margin-bottom: 10px;
 }
 
+.content-divider-projects {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  height: 3px;
+  background-color: #fbf5e7;
+  width: 60px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
 .arrow-bounce {
   margin-top: 40px;
   bottom: 30px;
@@ -351,6 +361,8 @@ h3 {
   background-repeat: no-repeat;
   max-height: 43.125rem;
   background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 
   &::before{
     display: block;
@@ -362,17 +374,15 @@ h3 {
 
 .profile-pic-one {
   background-position: center;
-  background-image: url("../images/profile.jpg");
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  background-image: url("../images/coffee.jpg");
 }
 
 .profile-pic-two {
-  background-image: url("https://www.fmsp.com/wp-content/uploads/2018/02/Marist-College-Student-Center-Rotunda-_1.jpg");
+  background-image: url("../images/marist.jpg");
 }
 
 .profile-pic-three {
-  background-image: url("https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("../images/work.jpeg");
 }
 
 .profile-info {
@@ -429,6 +439,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   padding-left: 60px;
+  padding-right: 20px;
+  @media only screen and (max-width: 768px) {
+    padding-left: 40px;
+  }
 }
 
 .box-image img{
@@ -472,7 +486,6 @@ h3 {
   position: relative;
   z-index: 2;
   text-align: left;
-  color: #0E0E24;
   @media only screen and (max-width: 900px) {
     font-size: 19vw;
   }
@@ -496,7 +509,7 @@ h3 {
     padding: 10px;
     border: none;
     margin-top: 20px;
-    background-color: #ffd830;
+    background-color: indianred;
   }
   a:hover {
     background-color: #b4d0e7;
